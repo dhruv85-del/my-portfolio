@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">Dhruv's Portfolio</div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home" class="nav-link" id="home-link">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="about-link">About</a></li>
+                    <li><a href="#services" class="nav-link" id="services-link">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section id="home" class="firstsection">
+            <div class="leftsection">Hey, Im' <span class="purple">Dhruv</span>
+                <div>and I am a Passionate </div>
+                <!-- <div>Web Developer</div> -->
+                <span id="element"></span>
+            </div>
+
+            <div class="rightsection">
+                <img src="images/pic1.webp" alt="">
+            </div>
+        </section>
+        <!-- About Section Start -->
+        <section id="about" class="aboutsection">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm <span class="purple">Dhruv</span>, a passionate developer dedicated to crafting seamless
+                    and engaging digital experiences.<br><br>
+                    My journey began with curiosity for how websites work, which soon turned into a love for building
+                    them. Over the years, I've honed my skills in <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>,
+                    <b>Node.js</b>, and <b>React.js</b>. I enjoy transforming ideas into reality, whether it's designing
+                    modern user interfaces, developing robust backends, or editing creative videos.<br><br>
+                    <b>What drives me?</b> A commitment to quality, a hunger for learning, and a desire to make a
+                    positive impact through technology. I thrive in collaborative environments and love tackling new
+                    challenges.<br><br>
+                </p>
+                <div class="about-details">
+                    <div>
+                        <strong>Skills:</strong>
+                        <ul>
+                            <li>🌐 Web Development (Frontend & Backend)</li>
+                            <li>⚛️ React.js & Node.js</li>
+                            <li>🎨 Graphic Design</li>
+                            <li>🎬 Video Editing</li>
+                            <li>🤝 Teamwork & Problem Solving</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>Contact:</strong>
+                        <ul>
+                            <li><span style="color:#a259f7;">Location:</span> India</li>
+                            <li><span style="color:#a259f7;">Email:</span> dhruv@example.com</li>
+                            <li><span style="color:#a259f7;">Interests:</span> Coding, UI/UX, Music, Learning new tech
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section Start -->
+        <section id="services" class="services-section">
+            <div class="services-content">
+                <h2>Services</h2>
+                <p>
+                    As a <span class="purple">Full Stack Developer</span>, I offer a range of services to help you
+                    build, launch, and grow your digital presence.<br><br>
+                    I specialize in creating modern, responsive, and high-performance web applications using the latest
+                    technologies. Whether you need a stunning frontend, a robust backend, or a complete end-to-end
+                    solution, I can deliver results tailored to your needs.
+                </p>
+                <div class="services-details">
+                    <div>
+                        <strong>What I Offer:</strong>
+                        <ul>
+                            <li>🌐 Custom Website & Web App Development</li>
+                            <li>⚛️ React.js Single Page Applications</li>
+                            <li>🛠️ Node.js & Express.js Backend APIs</li>
+                            <li>💾 Database Integration (MongoDB, MySQL)</li>
+                            <li>📱 Responsive & Mobile-First Design</li>
+                            <li>🚀 Deployment & Maintenance</li>
+                            <li>🔒 Authentication & Security</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>Why Work With Me?</strong>
+                        <ul>
+                            <li>✅ Clean, maintainable code</li>
+                            <li>✅ Fast turnaround & clear communication</li>
+                            <li>✅ Focus on user experience</li>
+                            <li>✅ Ongoing support & updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section Start -->
+        <section id="projects" class="projects-section">
+            <h2 class="projects-heading">Projects</h2>
+            <div class="projects-grid custom-4grid">
+                <div class="project-card square" >
+                    <img src="images/project1.png" alt="Project 1">
+                    <div class="project-title">BMW-ResponsiveX</div>
+                </div>
+                <div class="project-card square">
+                    <img src="images/project2.png" alt="Project 2">
+                    <div class="project-title">Personal Portfolio/<div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section Start -->
+        <section id="contact" class="contact-section">
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <p>If you have a project in mind, want to collaborate, or just want to say hello, feel free to reach
+                    out!</p>
+                <form id="contact-form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Type your message..."></textarea>
+                    </div>
+                    <button type="submit" class="contact-btn">Send Message</button>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                © 2025 Dhruv
+                <span class="footer-heart" title="Made with love"></span>
+
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/dhruv85-del" target="_blank" aria-label="GitHub">
+                    <img src="images/git.png" alt="GitHub" class="footer-icon">
+                </a>
+                <a href="https://instagram.com/your-instagram-username" target="_blank" aria-label="Instagram">
+                    <img src="images/insta.jpeg" alt="Instagram" class="footer-icon">
+                </a>
+                <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkdin.png" alt="LinkedIn" class="footer-icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-credit">
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+
+        // Hamburger menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navUl = document.querySelector('nav .right ul');
+        navToggle.addEventListener('click', function () {
+            navUl.classList.toggle('active');
+        });
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('nav .right ul li a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 700) {
+                    navUl.classList.remove('active');
+                }
+            });
+        });
+
+        // Smooth scroll for all navbar links with hashes
+        document.querySelectorAll('nav ul li a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                var targetId = this.getAttribute('href').slice(1);
+                var target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
