@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhruv - Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scipt.js">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
     <main>
         <section id="home" class="firstsection">
             <div class="leftsection">Hey, Im' <span class="purple">Dhruv</span>
-                <div>I am a Dedicated and results-driven Web Developer. </div>
+                <div>I am a dedicated and results-driven Web Developer. </div>
                 <!-- <div>Web Developer</div> -->
                 <span id="element"></span>
             </div>
@@ -72,8 +73,8 @@
                         <strong>Contact:</strong>
                         <ul>
                             <li><span style="color:#a259f7;">Location:</span> India</li>
-                            <li><span style="color:#a259f7;">Email:</span>rdhruv714@gmail.com</li>
-                            <li><span style="color:#a259f7;">Interests:</span> Coding, Music, Learning new tech
+                            <li><span style="color:#a259f7;">Email:</span> dhruv@example.com</li>
+                            <li><span style="color:#a259f7;">Interests:</span> Coding, UI/UX, Music, Learning new tech
                             </li>
                         </ul>
                     </div>
@@ -120,14 +121,23 @@
         <section id="projects" class="projects-section">
             <h2 class="projects-heading">Projects</h2>
             <div class="projects-grid custom-4grid">
-                <div class="project-card square" >
+                <a class="project-card square" 
+                   href="https://dhruv85-del.github.io/BMW-ResponsiveX/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="BMW-ResponsiveX">
                     <img src="images/project1.png" alt="Project 1">
                     <div class="project-title">BMW-ResponsiveX</div>
-                </div>
-                <div class="project-card square">
+                </a>
+                <a class="project-card square" 
+                   href="https://dhruv85-del.github.io/my-portfolio/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Personal Portfolio">
                     <img src="images/project2.png" alt="Project 2">
-                    <div class="project-title">Personal Portfolio/<div>
-                </div>
+                    <div class="project-title">Personal Portfolio</div>
+                </a>
+                <!-- Add more projects as needed in the same format -->
             </div>
         </section>
         <!-- Contact Section Start -->
@@ -211,6 +221,32 @@
                     e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
+            });
+        });
+
+        // Optional: Show a quick message when a project is clicked
+        document.querySelectorAll('.project-card.square').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                const title = card.querySelector('.project-title')?.textContent || "Project";
+                // Show a quick toast/alert (non-blocking)
+                const toast = document.createElement('div');
+                toast.textContent = `Opening ${title}...`;
+                toast.style.position = 'fixed';
+                toast.style.bottom = '32px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.background = '#a259f7';
+                toast.style.color = '#fff';
+                toast.style.padding = '10px 24px';
+                toast.style.borderRadius = '8px';
+                toast.style.fontSize = '1rem';
+                toast.style.boxShadow = '0 2px 12px #0002';
+                toast.style.zIndex = 9999;
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.remove();
+                }, 1200);
+                // Let the link open as usual
             });
         });
     </script>
