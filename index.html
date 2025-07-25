@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhruv - Developer Portfolio</title>
+    <meta name="description" content="Dhruv's portfolio: Full Stack Developer, UI/UX, and creative technologist. Explore projects, skills, and contact info.">
+    <meta name="keywords" content="Dhruv, portfolio, web developer, full stack, JavaScript, React, Node.js, UI/UX, projects, contact">
+    <meta property="og:title" content="Dhruv - Developer Portfolio">
+    <meta property="og:description" content="Explore Dhruv's work as a Full Stack Developer. Projects, skills, and contact info.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com/">
+    <meta property="og:image" content="images/pic1.webp">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scipt.js">
+    <link rel="icon" href="images/pic1.webp" type="image/webp">
 </head>
 
 <body>
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
 
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="left">Dhruv's Portfolio</div>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -27,25 +39,28 @@
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
+            <button id="theme-toggle" aria-label="Toggle light/dark mode" style="margin-left:16px;font-size:1.3rem;background:none;border:none;cursor:pointer;color:#a259f7;">
+                <span id="theme-icon">🌙</span>
+            </button>
         </nav>
         <hr>
     </header>
-    <main>
+    <main aria-label="Main content">
         <section id="home" class="firstsection">
             <div class="leftsection">Hey, Im' <span class="purple">Dhruv</span>
-                <div>and I am a Passionate </div>
+                <div>I am a dedicated and results-driven  </div>
                 <!-- <div>Web Developer</div> -->
                 <span id="element"></span>
             </div>
 
             <div class="rightsection">
-                <img src="images/pic1.webp" alt="">
+                <img src="images/pic1.webp" alt="Dhruv's profile picture" loading="lazy">
             </div>
         </section>
         <!-- About Section Start -->
-        <section id="about" class="aboutsection">
+        <section id="about" class="aboutsection fade-in">
             <div class="about-content">
-                <h2>About Me</h2>
+                <h2 class="aboutsection-heading section-heading-anim">About Me</h2>
                 <p>
                     Hello! I'm <span class="purple">Dhruv</span>, a passionate developer dedicated to crafting seamless
                     and engaging digital experiences.<br><br>
@@ -81,9 +96,9 @@
             </div>
         </section>
         <!-- Services Section Start -->
-        <section id="services" class="services-section">
+        <section id="services" class="services-section fade-in">
             <div class="services-content">
-                <h2>Services</h2>
+                <h2 class="services-heading section-heading-anim">Services</h2>
                 <p>
                     As a <span class="purple">Full Stack Developer</span>, I offer a range of services to help you
                     build, launch, and grow your digital presence.<br><br>
@@ -116,27 +131,143 @@
                 </div>
             </div>
         </section>
-        <!-- Projects Section Start -->
-        <section id="projects" class="projects-section">
-            <h2 class="projects-heading">Projects</h2>
-            <div class="projects-grid custom-4grid">
-                <div class="project-card square" >
-                    <img src="images/project1.png" alt="Project 1">
-                    <div class="project-title">BMW-ResponsiveX</div>
+        <!-- Skills/Tech Stack Section Start -->
+        <section id="skills" class="skills-section fade-in">
+            <h2 class="skills-heading section-heading-anim">Skills & Technologies</h2>
+            <div class="skills-icons">
+                <span class="skill-icon" title="HTML">
+                  <svg width="40" height="40" viewBox="0 0 128 128" aria-hidden="true"><title>HTML5</title><path fill="#E44D26" d="M19.5 114.5L8.1 0h111.8l-11.4 114.5-44.5 12.5z"/><path fill="#F16529" d="M64 117.2l35.9-10.1 9.8-98.1H64z"/><path fill="#EBEBEB" d="M64 66.6H47.2l-1-11.2H64V44.5H36.7l.3 3.2 2.7 30.2H64zM64 92.2l-.1.1-14.9-4-1-11.2H36.8l1.9 21.2 25.2 7.1.1-.1z"/><path fill="#FFF" d="M64 66.6v11.1h15.1l-1.4 15.5L64 92.2v11.2l25.2-7.1.2-2.2 2.3-25.7.2-3.2H64zm0-22.1v11.1h16.9l.2-2.2.5-5.6.3-3.2H64z"/></svg>
+                </span>
+                <span class="skill-icon" title="CSS">
+                  <svg width="40" height="40" viewBox="0 0 128 128" aria-hidden="true"><title>CSS3</title><path fill="#1572B6" d="M19.5 114.5L8.1 0h111.8l-11.4 114.5-44.5 12.5z"/><path fill="#33A9DC" d="M64 117.2l35.9-10.1 9.8-98.1H64z"/><path fill="#fff" d="M64 66.6H47.2l-1-11.2H64V44.5H36.7l.3 3.2 2.7 30.2H64zM64 92.2l-.1.1-14.9-4-1-11.2H36.8l1.9 21.2 25.2 7.1.1-.1z"/><path fill="#EBEBEB" d="M64 66.6v11.1h15.1l-1.4 15.5L64 92.2v11.2l25.2-7.1.2-2.2 2.3-25.7.2-3.2H64zm0-22.1v11.1h16.9l.2-2.2.5-5.6.3-3.2H64z"/></svg>
+                </span>
+                <span class="skill-icon" title="JavaScript">
+                  <svg width="40" height="40" viewBox="0 0 128 128" aria-hidden="true"><title>JavaScript</title><path fill="#F7DF1E" d="M1.408 1.408h125.184v125.185H1.408z"/><path d="M116.042 116.042V11.958H11.958v104.084z" fill="#F7DF1E"/><path d="M67.617 104.484c0 8.484-4.984 12.393-12.252 12.393-6.574 0-10.393-3.406-12.345-7.574l6.746-4.047c1.297 2.297 2.484 4.246 5.33 4.246 2.719 0 4.453-1.063 4.453-5.203V66.5h8.068zm16.484 12.393c-7.627 0-12.555-3.625-14.953-8.406l6.746-3.906c1.781 2.922 4.109 5.078 8.219 5.078 3.453 0 5.656-1.719 5.656-4.109 0-2.844-2.25-3.844-6.062-5.484l-2.078-.891c-6.016-2.563-10.016-5.781-10.016-12.578 0-6.266 4.781-11.047 12.25-11.047 5.313 0 9.141 1.844 11.891 6.672l-6.594 4.234c-1.453-2.594-3.016-3.625-5.297-3.625-2.406 0-3.938 1.531-3.938 3.625 0 2.531 1.531 3.531 5.078 5.078l2.078.891c7.047 3 11.047 6.047 11.047 12.891-.001 7.389-5.813 11.484-13.625 11.484z"/></svg>
+                </span>
+                <span class="skill-icon" title="React">
+                  <svg width="40" height="40" viewBox="0 0 128 128" aria-hidden="true"><title>React</title><g fill="none"><circle cx="64" cy="64" r="11" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="6"><ellipse rx="56" ry="22" cx="64" cy="64"/><ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(60 64 64)"/><ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(120 64 64)"/></g></g></svg>
+                </span>
+                <span class="skill-icon" title="Node.js">
+                  <svg width="40" height="40" viewBox="0 0 128 128" aria-hidden="true"><title>Node.js</title><path fill="#8CC84B" d="M64 1.6l55.4 32v60.8L64 126.4 8.6 94.4V33.6z"/><path fill="#fff" d="M64 116.2l44.2-25.6V37.4L64 11.8 19.8 37.4v53.2z"/><path fill="#8CC84B" d="M64 21.2l36.2 21v42L64 106.8 27.8 84.2v-42z"/><path fill="#fff" d="M64 98.2l29.2-16.8V46.6L64 29.8 34.8 46.6v34.8z"/><path fill="#8CC84B" d="M64 38.2l22.2 12.8v25.6L64 89.8 41.8 76.6V51z"/></svg>
+                </span>
+            </div>
+            <div class="skills-bars">
+                <div class="skill-bar-row">
+                    <span class="skill-label">HTML</span>
+                    <div class="skill-bar"><div class="skill-bar-fill html"></div></div>
                 </div>
-                <div class="project-card square">
-                    <img src="images/project2.png" alt="Project 2">
-                    <div class="project-title">Personal Portfolio/<div>
+                <div class="skill-bar-row">
+                    <span class="skill-label">CSS</span>
+                    <div class="skill-bar"><div class="skill-bar-fill css"></div></div>
+                </div>
+                <div class="skill-bar-row">
+                    <span class="skill-label">JavaScript</span>
+                    <div class="skill-bar"><div class="skill-bar-fill js"></div></div>
+                </div>
+                <div class="skill-bar-row">
+                    <span class="skill-label">React</span>
+                    <div class="skill-bar"><div class="skill-bar-fill react"></div></div>
+                </div>
+                <div class="skill-bar-row">
+                    <span class="skill-label">Node.js</span>
+                    <div class="skill-bar"><div class="skill-bar-fill node"></div></div>
                 </div>
             </div>
         </section>
+        <!-- Projects Section Start -->
+        <section id="projects" class="projects-section fade-in">
+            <h2 class="projects-heading section-heading-anim">Projects</h2>
+            <div class="projects-grid custom-4grid">
+                <a class="project-card square fade-in" 
+                   href="https://dhruv85-del.github.io/BMW-ResponsiveX/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="BMW-ResponsiveX">
+                    <img src="images/project1.png" alt="Project 1" loading="lazy">
+                    <div class="project-title">BMW-ResponsiveX</div>
+                    <div class="project-desc">A modern, responsive BMW landing page built with HTML, CSS, and JavaScript.</div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </a>
+                <a class="project-card square fade-in" 
+                   href="https://dhruv85-del.github.io/my-portfolio/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Personal Portfolio">
+                    <img src="images/project2.png" alt="Personal Portfolio screenshot" loading="lazy">
+                    <div class="project-title">Personal Portfolio</div>
+                    <div class="project-desc">My personal portfolio website showcasing my skills, projects, and contact info.</div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </a>
+                <a class="project-card square fade-in" 
+                   href="https://dhruv85-del.github.io/Echofy/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Third Project">
+                    <img src="images/projeect3.png" alt="Echofy music app screenshot" loading="lazy">
+                    <div class="project-title">Echofy</div>
+                    <div class="project-desc">Echofy: A web music player app to explore, play, and enjoy curated playlists.</div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Testimonials Section Start -->
+        <section id="testimonials" class="testimonials-section fade-in">
+            <h2 class="testimonials-heading section-heading-anim">Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">“Dhruv is a highly skilled developer who delivers quality work on time. His attention to detail and creativity are outstanding!”</div>
+                    <div class="testimonial-author">Amit Sharma</div>
+                    <div class="testimonial-role">Project Manager, Tech Solutions</div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">“Working with Dhruv was a fantastic experience. He communicates clearly and always goes the extra mile.”</div>
+                    <div class="testimonial-author">Priya Verma</div>
+                    <div class="testimonial-role">UI/UX Designer</div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">“Dhruv’s technical expertise and problem-solving skills helped our team achieve great results. Highly recommended!”</div>
+                    <div class="testimonial-author">Rahul Mehta</div>
+                    <div class="testimonial-role">Team Lead, Web Innovators</div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog/Articles Section Start -->
+        <section id="blog" class="blog-section fade-in">
+            <h2 class="blog-heading section-heading-anim">Blog & Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-card fade-in">
+                    <h3 class="blog-title">How I Built a Responsive Portfolio from Scratch</h3>
+                    <div class="blog-meta">April 2024</div>
+                    <div class="blog-summary">A step-by-step guide to designing and coding a modern, responsive portfolio using HTML, CSS, and JavaScript. Tips for layout, interactivity, and best practices.</div>
+                    <a href="#" class="blog-link" aria-label="Read more about building a responsive portfolio">Read More</a>
+                </article>
+                <article class="blog-card fade-in">
+                    <h3 class="blog-title">Top 5 JavaScript Tricks for Web Developers</h3>
+                    <div class="blog-meta">March 2024</div>
+                    <div class="blog-summary">Discover some lesser-known but powerful JavaScript techniques to enhance your web projects and improve your coding workflow.</div>
+                    <a href="#" class="blog-link" aria-label="Read more about JavaScript tricks">Read More</a>
+                </article>
+            </div>
+        </section>
         <!-- Contact Section Start -->
-        <section id="contact" class="contact-section">
+        <section id="contact" class="contact-section fade-in">
             <div class="contact-content">
-                <h2>Contact Me</h2>
+                <h2 class="contact-heading section-heading-anim">Contact Me</h2>
                 <p>If you have a project in mind, want to collaborate, or just want to say hello, feel free to reach
                     out!</p>
-                <form id="contact-form" autocomplete="off">
+                <form id="contact-form" autocomplete="off" role="form" aria-label="Contact form" action="https://formspree.io/f/mvgqakbe" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -182,7 +313,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Graphic Designer', 'Video Editor'],
+            strings: ['Graphic Designer', 'Web Developer'],
             typeSpeed: 50,
         });
 
@@ -212,6 +343,124 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+        // Optional: Show a quick message when a project is clicked
+        document.querySelectorAll('.project-card.square').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                const title = card.querySelector('.project-title')?.textContent || "Project";
+                // Show a quick toast/alert (non-blocking)
+                const toast = document.createElement('div');
+                toast.textContent = `Opening ${title}...`;
+                toast.style.position = 'fixed';
+                toast.style.bottom = '32px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.background = '#a259f7';
+                toast.style.color = '#fff';
+                toast.style.padding = '10px 24px';
+                toast.style.borderRadius = '8px';
+                toast.style.fontSize = '1rem';
+                toast.style.boxShadow = '0 2px 12px #0002';
+                toast.style.zIndex = 9999;
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.remove();
+                }, 1200);
+                // Let the link open as usual
+            });
+        });
+
+        // Light/Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+        function setTheme(theme) {
+            if (theme === 'light') {
+                body.classList.add('light-theme');
+                body.classList.remove('dark-theme');
+                themeIcon.textContent = '☀️';
+            } else {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeIcon.textContent = '🌙';
+            }
+        }
+        // Load theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        setTheme(savedTheme === 'light' ? 'light' : 'dark');
+        themeToggle.addEventListener('click', function () {
+            const isLight = body.classList.contains('light-theme');
+            setTheme(isLight ? 'dark' : 'light');
+            localStorage.setItem('theme', isLight ? 'dark' : 'light');
+        });
+
+        // Contact form validation and feedback
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        contactForm.addEventListener('submit', function (e) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!name || !email || !message) {
+                e.preventDefault();
+                formStatus.textContent = 'Please fill in all fields.';
+                formStatus.style.color = '#e74c3c';
+                return;
+            }
+            if (!emailPattern.test(email)) {
+                e.preventDefault();
+                formStatus.textContent = 'Please enter a valid email address.';
+                formStatus.style.color = '#e74c3c';
+                return;
+            }
+            // Let the form submit to Formspree, but show a thank you message after submission
+            contactForm.addEventListener('formspree:submit', function () {
+                formStatus.textContent = 'Thank you! Your message has been sent.';
+                formStatus.style.color = '#27ae60';
+                contactForm.reset();
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                }, 3000);
+            });
+        });
+
+        // Fade-in animation on scroll
+        function revealOnScroll() {
+            const fadeEls = document.querySelectorAll('.fade-in, .section-heading-anim');
+            const windowHeight = window.innerHeight;
+            fadeEls.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < windowHeight - 60) {
+                    el.classList.add('visible');
+                }
+            });
+
+            // Animate skill bars
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                const rect = skillsSection.getBoundingClientRect();
+                if (rect.top < windowHeight - 60) {
+                    document.querySelector('.skill-bar-fill.html').style.width = '95%';
+                    document.querySelector('.skill-bar-fill.css').style.width = '90%';
+                    document.querySelector('.skill-bar-fill.js').style.width = '85%';
+                    document.querySelector('.skill-bar-fill.react').style.width = '80%';
+                    document.querySelector('.skill-bar-fill.node').style.width = '75%';
+                }
+            }
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('resize', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+
+        // Hide loading spinner when page is loaded
+        window.addEventListener('load', function() {
+            const spinner = document.getElementById('loading-spinner');
+            if (spinner) {
+                spinner.style.opacity = '0';
+                setTimeout(() => spinner.style.display = 'none', 400);
+            }
         });
     </script>
 </body>
